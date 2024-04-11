@@ -24,6 +24,8 @@ numpy (numerical operations), pandas (data manipulation), matplotlib (visualizat
 ## Correlation of the Features
 Below is the correlation of the characteristics of the tumors. The lighter the color is the more positively correlated, and vise versa.
 
+![](images/BC_K_corr.png)
+
 ## Creating the Model
 After splitting the data into a test and training set, I scaled the data. On top of the benefits of scaling for machine learning and deep learning models, I specifically chose "MinMaxScaler" to mitigate the varying ranges oo the values for each feature, to account for the Non-Gaussian distribution, and for optimization of the Gradient Descent. 
 
@@ -36,7 +38,9 @@ The model was initially set to train for a maximum of 600 epochs, but with Early
 
 After training, we plotted the training loss (loss) and the validation loss (val_loss) over epochs. The plot showed how the model's performance improved over time and confirmed that training was stopped to prevent overfitting.
 
-
+![](images/BC_K_loss.png)
 
 ###Evaluation
 The EarlyStopping mechanism, along with the implementation of dropout layers, played a crucial role in achieving the high accuracy and F1-scores reported for this model. This approach to training ensures that our model is robust, generalizes well to unseen data, and is indicative of the careful consideration given to avoiding common pitfalls such as overfitting
+
+![](images/BC_K_evl.png)
